@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Yahfie";
+}
+
+header {
+  padding: 1em;
+}
+
+h1 {
+  font-family: "October Crow";
+  text-align: center;
+}
+
+.instructions {
+  margin: 1em;
+  text-align: center;
+}
+
+.instructions h2 {
+  margin-bottom: 0.3em;
+}
