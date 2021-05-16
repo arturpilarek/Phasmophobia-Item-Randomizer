@@ -2,7 +2,7 @@ const rollButton = document.querySelector(".name__submit")
 let nameFields = Array.from(document.getElementsByClassName("name__text-field"))
 const resultsContainer = document.querySelector(".results")
 let namesArray = []
-const items = [
+let items = [
   "Spirit Box",
   "Ghost Writing Book",
   "Photo Camera",
@@ -20,7 +20,7 @@ const items = [
   "Sound Sensor",
   "Thermometer",
 ]
-const lightItems = ["Candle + Lighter", "Strong Flashlight", "Flashlight"]
+let lightItems = ["Candle + Lighter", "Strong Flashlight", "Flashlight"]
 
 rollButton.addEventListener("click", (e) => {
   e.preventDefault()
@@ -35,7 +35,6 @@ function assignNames() {
     namesArray.push(name.value)
   })
   namesArray = namesArray.filter(Boolean)
-  console.log(namesArray)
 }
 
 function fillResultsContainer() {
@@ -56,5 +55,41 @@ function fillResultsContainer() {
 
 function assignItems() {
   const listItem = Array.from(document.querySelectorAll(".results__list"))
-  console.log(listItem)
+  listItem.forEach((element) => {
+    for (i = 0; i < 2; i++) {
+      const newListItem = document.createElement("li")
+      element.appendChild(newListItem)
+      newListItem.innerHTML = items[getRandomInt(0, 15)]
+      items = items.filter((item) => {
+        return item !== newListItem.innerText
+      })
+    }
+    items = [
+      "Spirit Box",
+      "Ghost Writing Book",
+      "Photo Camera",
+      "EMF Reader",
+      "Video Camera + Tripod",
+      "UV Flashlight",
+      "Crucifix",
+      "Glow Stick",
+      "Infrared Light Sensor",
+      "Motion Sensor",
+      "Parabolic Microphone",
+      "Salt",
+      "Sanity Pills",
+      "Smudge Sticks + Lighter",
+      "Sound Sensor",
+      "Thermometer",
+    ]
+    const newLightSource = document.createElement("li")
+    element.appendChild(newLightSource)
+    newLightSource.innerHTML = lightItems[getRandomInt(0, 2)]
+  })
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
 }

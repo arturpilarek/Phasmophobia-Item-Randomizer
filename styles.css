@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Conv_October.Crow";
+  src: url("fonts/October.Crow.eot");
+  src: local("☺"), url("fonts/October.Crow.woff") format("woff"),
+    url("fonts/October.Crow.ttf") format("truetype"),
+    url("fonts/October.Crow.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Yahfie;
+  src: url(Assets/yahfie.normal.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Yahfie;
+  src: url(Assets/yahfie.heavy.ttf);
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +42,7 @@ html {
 body {
   background-color: black;
   color: white;
-  font-family: "Yahfie";
+  font-family: Yahfie;
 }
 
 header {
@@ -29,7 +50,7 @@ header {
 }
 
 h1 {
-  font-family: "October Crow";
+  font-family: "Conv_October.Crow", Sans-Serif;
   text-align: center;
 }
 
@@ -62,8 +83,27 @@ h1 {
 }
 
 .name__submit {
+  display: block;
+  background-color: white;
+  color: black;
+  font-weight: bold;
   margin-top: 1.3rem;
   padding: 0.2em 0.3em;
-  font-family: "Poppins";
   font-size: 1.1rem;
+}
+
+.results {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.results div {
+  margin-top: 1rem;
+}
+
+.results ul li {
+  list-style: none;
 }
