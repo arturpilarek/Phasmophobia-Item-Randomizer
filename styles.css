@@ -34,10 +34,36 @@ h1 {
 }
 
 .instructions {
-  margin: 1em;
+  margin: 1rem;
   text-align: center;
 }
 
 .instructions h2 {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.3rem;
+}
+
+.instructions p {
+  font-size: 0.9em;
+}
+
+.name__form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name__form label {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.4rem;
+  font-weight: bold;
+}
+
+.name__submit {
+  margin-top: 1.3rem;
+  padding: 0.2em 0.3em;
+  font-family: "Poppins";
+  font-size: 1.1rem;
 }
